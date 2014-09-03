@@ -7,6 +7,6 @@ When(/^the calculator is run$/) do
 	raise('Command failed!') unless $?.success?
 end
 
-Then(/^the output shoud be "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^the output shoud be "(.*?)"$/) do |expected_output|
+	@output.should	== expected_output
 end
